@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
-
-  get 'static_pages/help'
+  root 'static_pages#home' #alls the home controller as the root, replaces the get for this page
+  get 'static_pages/help' #routes the URL request for static_pages/home to the home controller
+  get 'static_pages/about'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  #root 'static_pages#home' #don't need this becuase it replaced the get above
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
