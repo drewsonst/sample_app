@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   root 'static_pages#home' #alls the home controller as the root, replaces the get for this page
-  get 'static_pages/help' #routes the URL request for static_pages/home to the home controller
-  get 'static_pages/about'
+  get 'help'    => 'static_pages#help' #routes the URL request for static_pages/home to the home controller
+  get 'about'   => 'static_pages#about'
+  get 'contact' => 'static_pages#contact'
+  get 'signup'  => 'users#new'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

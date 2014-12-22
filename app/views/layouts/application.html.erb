@@ -5,13 +5,18 @@
   <title><%= full_title(yield(:title)) %></title> 
   <%= stylesheet_link_tag('application', {media: 'all', 'data-turbolinks-track' => true}) %>
   <!-- The () and {} are optional as seen below {} only optional if it's the last param-->
-  <!-- becomes <link rel="stylesheet" media="all" href="/assets/static_pages-069e88c06b889877799890854d7f4c40.css?body=1" data-turbolinks-track="true" /> -->
+  <!-- becomes <link data-turbolinks-track="true" href="/assets/application.css" media="all" rel="stylesheet" /> -->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  
+  <!-- inserts the _shim.html.erb partial -->
+  <%= render 'layouts/shim' %>
 </head>
 <body>
-
-<%= yield %>
-
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
 </body>
 </html>

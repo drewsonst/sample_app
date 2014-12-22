@@ -7,4 +7,7 @@ class StaticPagesController < ApplicationController #called by the router when /
   
   def about
   end
+  
+  def contact
+  end
 end
