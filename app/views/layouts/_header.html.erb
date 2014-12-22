@@ -1,0 +1,17 @@
+<!-- this is a partial to contain the header code, it's added to the application layout using render -->
+
+<!-- navbar fixed to the top of the screen, inverse makes it dark instead of light -->
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <!-- Rails helper to create link - text, url, options hash -->
+    <%= link_to "sample app", root_path, id: "logo" %>
+  <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- root_path is created byt he routes file in config -->
+        <li><%= link_to "Home",   root_path %></li> 
+        <li><%= link_to "Help",   help_path %></li>
+        <li><%= link_to "Log in", '#' %></li>
+      </ul>
+    </nav>
+  </div>
+</header>

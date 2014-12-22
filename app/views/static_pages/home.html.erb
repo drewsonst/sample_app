@@ -1,6 +1,19 @@
 <!-- Called from the static_pages_controller home method -->
 <% provide(:title, "Home") %> <!--provides the value for :title when contorl is yeilded -->
 
-<h1>Sample App</h1>
-<p>This is the sample home page</p>
+<div class="center jumbotron">
+  <h1>Welcome to the Sample App</h1>
 
+  <h2>
+    This is the home page for the
+    <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+    sample application.
+  </h2>
+
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <!-- Rails helper to create link - text, url, options hash -->
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails logo"),
+            'http://rubyonrails.org/' %>
+<!-- Rails helper to create image - name (auto look in app/asets/images/), options hash -->
